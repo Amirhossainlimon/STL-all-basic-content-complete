@@ -2,7 +2,7 @@
 #include<vector>
 #include<list>
 #include<deque>
-#include <utility>
+#include <utility> // for swap,pair,make_pair(),tie() etc
 #include<string>
 #include <tuple>
 #include<stack>
@@ -11,7 +11,8 @@
 #include<unordered_map>
 #include<set>
 #include<unordered_set>
-#include<algorithm>
+#include<algorithm> //for sort(), reverse(), binary_search(), max_element(), min_element(), count(), find(), next_permutation()
+
 using namespace std;
 
 bool comparator(pair<int, int> p1, pair<int, int> p2) {
@@ -394,7 +395,16 @@ long long int n3 = 50;
 
 cout<<"Number of set bits in int (15): "<< __builtin_popcount(n) << endl;    // for int
 cout  << "Number of set bits in int (40): " << __builtin_popcountl(n2) << endl;  // for long int
-cout<< "Number of set bits in int (50): "  << __builtin_popcountll(n3) << endl; // for long long int
+cout<< "Number of set bits in int (50): "  << __builtin_popcountll(n3) << endl<<endl; // for long long int
+ cout<<"String upper case & lower case:"<<endl;
+string Str="Limon";
+
+ transform(Str.begin(), Str.end(), Str.begin(), ::toupper);
+ cout << "Upper case: " << Str << endl;
+
+  transform(Str.begin(), Str.end(), Str.begin(), ::tolower);
+  cout << "Lower case: " << Str << endl;
+
 
 return 0;
 }
