@@ -22,7 +22,7 @@ int main() {
             Tail=Head;
         }
         else {
-            Tail->next= new Node(a[i]);
+            Tail->next= new Node(arr[i]);
             Tail= Tail->next;  
           
         }
@@ -38,4 +38,5 @@ int main() {
 
     return 0;
 }
+
 
