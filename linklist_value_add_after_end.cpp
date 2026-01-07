@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
 
-// Node structure definition
 class Node {
   public:
         int data;
@@ -15,17 +14,17 @@ class Node {
 int main() {
     int arr[] = {10, 20, 30, 40};
     Node* Head = NULL;
+    Node*Tail=NULL;
 
     for (int i = 0; i < 4; i++) {
         if (Head == NULL) {
             Head = new Node(arr[i]);
+            Tail=Head;
         }
         else {
-            Node* tail = Head;
-            while (tail->next != NULL) {
-                tail = tail->next;
-            }
-            tail->next = new Node(arr[i]);
+            Tail->next= new Node(a[i]);
+            Tail= Tail->next;  
+          
         }
     }
 
@@ -39,3 +38,4 @@ int main() {
 
     return 0;
 }
+
